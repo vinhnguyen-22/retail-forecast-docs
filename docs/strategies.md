@@ -192,4 +192,4 @@ The pipeline can dynamically select and tune the reconciliation method each runâ
 
 A **hybrid reconciliation approach** ensures forecasts are accurate, robust, and actionable for every level of your business.
 
-For more details on implementation, see [System Architecture](architecture.md) and [Appendix](appendix.md).
+For more details on implementation, see [System Architecture](architecture.md)
