@@ -5,7 +5,7 @@
 > Multi-step forecasting predicts a sequence of future values (e.g., next 7/30 days of sales).  
 > There are three core strategies: **Direct**, **Recursive**, and **Hybrid**.
 
----
+![multi step image](./images/multi_step.png)
 
 ### 1️⃣ Direct Multi-step Forecasting
 
