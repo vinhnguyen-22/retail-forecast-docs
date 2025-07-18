@@ -5,8 +5,6 @@
 > Multi-step forecasting predicts a sequence of future values (e.g., next 7/30 days of sales).  
 > There are three core strategies: **Direct**, **Recursive**, and **Hybrid**.
 
-![multi step image](./images/multi_step.png)
-
 ### 1️⃣ Direct Multi-step Forecasting
 
 **Definition:**  
@@ -24,6 +22,8 @@ A separate model is trained for each forecast horizon (T+1, T+2, ..., T+H).
     - 💸 **Resource intensive:** More compute, more maintenance.
     - ⚠️ **Framework limitations:** Not all ML libraries support multi-output.
 
+![multi step image](./images/diagram-direct.png)
+
 **When to use:**
 
 - You need top accuracy for each future step (e.g., daily business KPIs).
@@ -31,7 +31,7 @@ A separate model is trained for each forecast horizon (T+1, T+2, ..., T+H).
 
 ---
 
-### 2️⃣ Recursive (Iterated) Multi-step Forecasting
+### 2️⃣ Recursive Multi-step Forecasting
 
 **Definition:**  
 Train a single model for one-step-ahead. Predict recursively: use each output as next input.
@@ -46,6 +46,8 @@ Train a single model for one-step-ahead. Predict recursively: use each output as
 
     - 🔴 **Error accumulation:** Mistakes at each step snowball for long horizons.
     - 📉 **Weaker for long-range forecasts:** Accuracy drops the further you predict.
+
+![multi step image](./images/diagram-recursive.png)
 
 **When to use:**
 
@@ -68,6 +70,8 @@ Combine direct and recursive: e.g., direct for first few steps, recursive after,
 
     - 🧑‍🔬 **Complex implementation:** Logic and tuning more involved.
     - 👷 **May need custom code or frameworks.**
+
+![multi step image](./images/multi_step.png)
 
 **When to use:**
 

@@ -607,9 +607,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-recursive-iterated-multi-step-forecasting" class="md-nav__link">
+  <a href="#2-recursive-multi-step-forecasting" class="md-nav__link">
     <span class="md-ellipsis">
-      2️⃣ Recursive (Iterated) Multi-step Forecasting
+      2️⃣ Recursive Multi-step Forecasting
     </span>
   </a>
   
@@ -734,7 +734,6 @@
 <p>Multi-step forecasting predicts a sequence of future values (e.g., next 7/30 days of sales).<br />
 There are three core strategies: <strong>Direct</strong>, <strong>Recursive</strong>, and <strong>Hybrid</strong>.</p>
 </blockquote>
-<hr />
 <h3 id="1-direct-multi-step-forecasting">1️⃣ Direct Multi-step Forecasting<a class="headerlink" href="#1-direct-multi-step-forecasting" title="Permanent link">&para;</a></h3>
 <p><strong>Definition:</strong><br />
 A separate model is trained for each forecast horizon (T+1, T+2, ..., T+H).</p>
@@ -754,13 +753,14 @@ A separate model is trained for each forecast horizon (T+1, T+2, ..., T+H).</p>
 <li>⚠️ <strong>Framework limitations:</strong> Not all ML libraries support multi-output.</li>
 </ul>
 </div>
+<p><img alt="multi step image" src="../images/diagram-direct.png" /></p>
 <p><strong>When to use:</strong></p>
 <ul>
 <li>You need top accuracy for each future step (e.g., daily business KPIs).</li>
 <li>Have enough data and compute for multi-model training.</li>
 </ul>
 <hr />
-<h3 id="2-recursive-iterated-multi-step-forecasting">2️⃣ Recursive (Iterated) Multi-step Forecasting<a class="headerlink" href="#2-recursive-iterated-multi-step-forecasting" title="Permanent link">&para;</a></h3>
+<h3 id="2-recursive-multi-step-forecasting">2️⃣ Recursive Multi-step Forecasting<a class="headerlink" href="#2-recursive-multi-step-forecasting" title="Permanent link">&para;</a></h3>
 <p><strong>Definition:</strong><br />
 Train a single model for one-step-ahead. Predict recursively: use each output as next input.</p>
 <div class="admonition tip">
@@ -778,6 +778,7 @@ Train a single model for one-step-ahead. Predict recursively: use each output as
 <li>📉 <strong>Weaker for long-range forecasts:</strong> Accuracy drops the further you predict.</li>
 </ul>
 </div>
+<p><img alt="multi step image" src="../images/diagram-recursive.png" /></p>
 <p><strong>When to use:</strong></p>
 <ul>
 <li>Resource-constrained environments.</li>
@@ -801,6 +802,7 @@ Combine direct and recursive: e.g., direct for first few steps, recursive after,
 <li>👷 <strong>May need custom code or frameworks.</strong></li>
 </ul>
 </div>
+<p><img alt="multi step image" src="../images/multi_step.png" /></p>
 <p><strong>When to use:</strong></p>
 <ul>
 <li>When horizon is long and you want both accuracy and efficiency.</li>
@@ -1056,7 +1058,7 @@ Managers at every level—from HQ to store—see numbers that “add up”, driv
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2025 16:21:10 UTC">July 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2025 16:28:04 UTC">July 18, 2025</span>
   </span>
 
     
